@@ -1,4 +1,4 @@
-import "./App.css";
+
 import {
   BrowserRouter,
   Route,
@@ -7,13 +7,12 @@ import {
 import Home from "./components/Home";
 import OrderForm from "./components/OrderForm";
 import Success from "./components/Success";
-import Header from "./components/Header";
 import "./components/Component.css"
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />
+
       <Switch>
         <Route exact path="/">
           <Home />

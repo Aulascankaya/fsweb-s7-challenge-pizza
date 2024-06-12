@@ -1,6 +1,78 @@
-.siparis-button{
-    background-color: #fdc913;
-    color:#292929;
-    border-radius: 100px;
-    cursor: pointer;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.home-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("Assets/mile1-assets/home-banner.png");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.home-page-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 586.67px;
+  height: 300px;
+  padding: 35px 0px 0.73px 0px;
+  gap: 0px;
+  opacity: 0px;
+}
+.home-page img {
+  margin-top: 115px;
+  margin-bottom: -15px;
+}
+
+.home-page h1 {
+  font-weight: 300;
+  text-align: center;
+  color: #faf7f2;
+  font-size: 86px;
+  font-family: "Roboto Condensed";
+  line-height: 92px;
+  letter-spacing: 1.5px;
+}
+.home-page span {
+  display: block;
+}
+
+.siparis-button {
+  background-color: #fdc913;
+  color: #292929;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 193px;
+  height: 56px;
+  border: 0;
+  font-family: "Barlow";
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.siparis-button:hover {
+  background-color: #e0a300;
+  color: #292929;
+}
+
+
+/* HOME PAGE ENDS */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 20vh;
+  background-color: #CE2829;
 }
