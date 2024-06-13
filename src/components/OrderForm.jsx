@@ -1,27 +1,34 @@
 import { useEffect, useState } from "react";
 import { Form, FormGroup, Label, Input } from "reactstrap";
+import Check from "./Check";
 
+const initialForm = {};
 
-
-const initialForm = {
- 
-};
+const malzemeler = [
+  { value: "pepperoni", label: "Pepperoni" },
+  { value: "sosis", label: "Sosis" },
+  { value: "kanada jambonu", label: "Kanada Jambonu" },
+  { value: "tavuk ızgara", label: "Tavuk Izgara" },
+  { value: "soğan", label: "Soğan" },
+  { value: "domates", label: "Domates" },
+  { value: "mısır", label: "Mısır" },
+  { value: "sucuk", label: "Sucuk" },
+  { value: "jalepeno", label: "Jalepeno" },
+  { value: "sarımsak", label: "Sarımsak" },
+  { value: "biber", label: "Biber" },
+  { value: "ananas", label: "Ananas" },
+  { value: "kabak", label: "Kabak" },
+  { value: "brokoli", label: "Brokoli" },
+  { value: "zeytin", label: "Zeytin" },
+];
 
 export default function OrderForm() {
-
-
   const [form, setForm] = useState(initialForm);
 
   // handleChange fonksiyonu
-  const handleChange = (event) => {
-
-  };
+  const handleChange = (event) => {};
   //handleSubmit fonksiyonu
-  const handleSubmit = (e) => {
-
-  };
-
-
+  const handleSubmit = (e) => {};
 
   //form elemanları
 
@@ -48,46 +55,49 @@ export default function OrderForm() {
           düzieştirilmiş mayalı bugday bazlı hamurdan oluşan italyan kökenli
           lezzetli bir yemektir.. Küçük bir pizzaya bazen pizzetta denir.
         </p>
-        <div>
-          <div>
-            <div>
-              <h3>Boyut Seç</h3>
-              <FormGroup>
-                <Input
-                  type="radio"
-                  name="pizzaSize"
-                  value="Küçük"
-                  onChange={handleChange}
-                  checked={form.pizzaSize === "Küçük"}
-                />
-                <Label htmlFor="küçük">Küçük</Label>
-              </FormGroup>
+        <div className="pizza-size-container">
+          <div className="pizza-size-card">
+            <h3>
+              Boyut Seç <span>*</span>
+            </h3>
+            <FormGroup>
+              <Input
+                type="radio"
+                name="pizzaSize"
+                value="Küçük"
+                onChange={handleChange}
+                checked={form.pizzaSize === "Küçük"}
+              />
+              <Label htmlFor="küçük">Küçük</Label>
+            </FormGroup>
 
-              <FormGroup>
-                <Input
-                  type="radio"
-                  name="pizzaSize"
-                  value="Orta"
-                  onChange={handleChange}
-                  checked={form.pizzaSize === "Orta"}
-                />
-                <Label htmlFor="orta">Orta</Label>
-              </FormGroup>
+            <FormGroup>
+              <Input
+                type="radio"
+                name="pizzaSize"
+                value="Orta"
+                onChange={handleChange}
+                checked={form.pizzaSize === "Orta"}
+              />
+              <Label htmlFor="orta">Orta</Label>
+            </FormGroup>
 
-              <FormGroup>
-                <Input
-                  type="radio"
-                  name="pizzaSize"
-                  value="Büyük"
-                  onChange={handleChange}
-                  checked={form.pizzaSize === "Büyük"}
-                />
-                <Label htmlFor="büyük">Büyük</Label>
-              </FormGroup>
-            </div>
+            <FormGroup>
+              <Input
+                type="radio"
+                name="pizzaSize"
+                value="Büyük"
+                onChange={handleChange}
+                checked={form.pizzaSize === "Büyük"}
+              />
+              <Label htmlFor="büyük">Büyük</Label>
+            </FormGroup>
           </div>
-          <div>
-            <h3>Hamur Kalinligi</h3>
+
+          <div className="pizza-dough-card">
+            <h3>
+              Hamur Seç<span>*</span>
+            </h3>
             <FormGroup>
               <select
                 type="select"
@@ -101,6 +111,23 @@ export default function OrderForm() {
             </FormGroup>
           </div>
         </div>
+
+        <h3>Ek Malzemeler</h3>
+        <div className="malzemeler-container">
+        {malzemeler.map((malzeme, index) => {
+          return (
+            <Check
+              key={index}
+              changeFn={handleChange}
+              value={malzeme.value}
+              label={malzeme.label}
+              name="ekMalzeme"
+              className="malzeme-label"
+            />
+          );
+        })}
+      </div>
+
       </Form>
     </>
   );
