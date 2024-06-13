@@ -1,7 +1,7 @@
-body {
-  margin: 0;
-  padding: 0;
-}
+
+
+
+/* HOME PAGE */
 
 .home-page {
   display: flex;
@@ -65,8 +65,11 @@ body {
 }
 
 
-/* HOME PAGE ENDS */
+/* HOME PAGE END */
 
+
+
+/* HEADER */
 .header {
   display: flex;
   flex-direction: column;
@@ -75,4 +78,90 @@ body {
   width: 100vw;
   height: 20vh;
   background-color: #CE2829;
+
 }
+/* HEADER END*/
+
+/*ORDER PAGE*/
+
+.formContainer{
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.formContainer h3{
+  font-family: Barlow;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 29.44px;
+  text-align: left;
+
+}
+
+.rating-container{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.price {
+  font-family: Barlow;
+font-size: 28px;
+font-weight: 700;
+line-height: 37.47px;
+text-align: left;
+
+}
+.rating {
+  display: flex;
+  justify-content: space-between;
+  gap: 75px; /* Rating değerleri arasındaki boşluk */
+  align-items: center; /* Dikey hizalama */
+}
+
+.infoText {
+  font-family: Barlow;
+font-size: 16px;
+font-weight: 400;
+line-height: 28.8px;
+text-align: left;
+
+}
+
+
+
+
+/* ORDER PAGE END*/
+
+
+
+
+/*SUCCESS PAGE*/
+
+.orderSuccess{
+  font-family: Roboto Condensed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #CE2829;
+  color: #faf7f2;
+  width: 100vw;
+  height: 100vh;
+}
+.orderSuccess img{
+ margin-top: 0;
+  margin-bottom:100px;
+}
+
+.orderSuccess p{
+  margin: 0;
+padding: 0;
+  font-size: 86px;
+  font-weight: 300;
+  line-height: 92px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+/*SUCCESS PAGE END*/

@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import OrderForm from "./components/OrderForm";
 import Success from "./components/Success";
 import "./components/Component.css"
+import "./App.css"
 
 function App() {
   return (
