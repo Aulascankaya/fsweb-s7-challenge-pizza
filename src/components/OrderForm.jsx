@@ -114,20 +114,30 @@ export default function OrderForm() {
 
         <h3>Ek Malzemeler</h3>
         <div className="malzemeler-container">
-        {malzemeler.map((malzeme, index) => {
-          return (
-            <Check
-              key={index}
-              changeFn={handleChange}
-              value={malzeme.value}
-              label={malzeme.label}
-              name="ekMalzeme"
-              className="malzeme-label"
-            />
-          );
-        })}
-      </div>
-
+          {malzemeler.map((malzeme, index) => {
+            return (
+              <Check
+                key={index}
+                changeFn={handleChange}
+                value={malzeme.value}
+                label={malzeme.label}
+                name="ekMalzeme"
+                className="malzeme-label"
+              />
+            );
+          })}
+        </div>
+        <div className="input-container">
+          <h3>Sipariş Notu</h3>
+          <Input
+            type="textarea"
+            name="siparisNotu"
+            value={form.siparisNotu}
+            onChange={handleChange}
+            placeholder="Siparişine eklemek istediğin bir not var mı?"
+            id="textArea"
+          />
+        </div>
       </Form>
     </>
   );
