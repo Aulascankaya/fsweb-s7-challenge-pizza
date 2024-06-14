@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Form, FormGroup, Label, Input } from "reactstrap";
 import Check from "./Check";
+import Counter from "./Counter";
 
 const initialForm = {};
 
@@ -138,6 +139,9 @@ export default function OrderForm() {
             id="textArea"
           />
         </div>
+        <hr />
+
+        <Counter/>
       </Form>
     </>
   );
