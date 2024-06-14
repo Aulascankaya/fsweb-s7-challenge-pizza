@@ -78,7 +78,7 @@
 /*ORDER PAGE*/
 
 .formContainer {
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -165,28 +165,87 @@ hr {
   width: 580px;
 }
 
-.button-group{
+.button-group {
   margin-top: 30px;
 }
-.decrement-button{
-width: 47px;
-height: 56px;
-border-radius: 6px 0px 0px 6px;
-background-color: #fdc913;
+.decrement-button {
+  width: 47px;
+  height: 56px;
+  border-radius: 6px 0px 0px 6px;
+  background-color: #fdc913;
 }
-.increment-button{
+.increment-button {
   width: 47px;
   height: 56px;
   border-radius: 0px 6px 6px 0px;
   background-color: #fdc913;
-  }
+}
 
-  .numberCounter{
-       padding: 17px 20px;
-       border: 1px solid #D9D9D9;
-  }
+.numberCounter {
+  padding: 17px 20px;
+  border: 1px solid #d9d9d9;
+}
+
+.siparis-container {
+  display: flex;
+  justify-content: space-between;
+
+}
+.siparis-toplam {
+  width: 386px;
+  padding: 0 ;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  margin-top: 30px;
+}
+
+.siparis-toplam h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding: 0px 60px;
+  height: 30px;
+}
+.price-container{
+  margin: 25px 0;
+}
 
 
+.fiyatlar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 30px;
+  font-size: 16px;
+  padding: 0 60px;
+}
+
+.fiyatlar.grey {
+  color: #666;
+}
+
+.fiyatlar.red {
+  color: red;
+  font-weight: bold;
+}
+
+.submit-button {
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  height: 62px;
+  border-radius: 6px;
+}
+
+.submit-button:hover {
+  background-color: #ffa000;
+}
 
 /* ORDER PAGE END*/
 

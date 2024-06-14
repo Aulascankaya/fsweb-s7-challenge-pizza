@@ -141,7 +141,28 @@ export default function OrderForm() {
         </div>
         <hr />
 
-        <Counter/>
+        <div className="siparis-container">
+          <div className="counter-button">
+            <Counter />
+          </div>
+
+          <div className="siparis-toplam">
+
+            <h3>Sipariş Toplamı</h3>
+            <div className="price-container">
+            <div className="fiyatlar grey">
+              <p>Seçimler:</p>
+              <p >5₺</p>
+            </div>
+            <div className="fiyatlar red">
+              <p>Toplam:</p>
+              <p>₺</p>
+            </div>
+            </div>
+
+            <button className="submit-button"> Sipariş Ver</button>
+          </div>
+        </div>
       </Form>
     </>
   );
