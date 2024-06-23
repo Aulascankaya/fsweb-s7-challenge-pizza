@@ -9,6 +9,7 @@ const initialErrors = {
   pizzaSize: true,
   pizzaHamur: true,
   ekMalzeme: true,
+  fullname: true,
 };
 
 const initialForm = {
@@ -72,6 +73,13 @@ export default function OrderForm() {
     }
 
     setForm({ ...form, [name]: newValue });
+    if (name == "fullname") {
+      if (value.replaceAll(" ", "").length >= 3) {
+        setErrors({ ...errors, [name]: false });
+      } else {
+        setErrors({ ...errors, [name]: true });
+      }
+    }
   };
 
   //handleSubmit fonksiyonu
@@ -114,8 +122,9 @@ export default function OrderForm() {
   useEffect(() => {
     setIsValid(
       !errors.ekMalzeme &&
-      !errors.pizzaSize &&
-      !errors.pizzaHamur
+        !errors.pizzaSize &&
+        !errors.pizzaHamur &&
+        !errors.fullname
     );
   }, [errors]);
 
@@ -150,9 +159,7 @@ export default function OrderForm() {
               Boyut Seç <span>*</span>
             </h3>
             {errors.pizzaSize && (
-              <p style={{ color: "red" }}>
-                Lütfen bir boyut seçiniz.
-              </p>
+              <p style={{ color: "red" }}>Lütfen bir boyut seçiniz.</p>
             )}
             <FormGroup>
               <Input
@@ -196,9 +203,7 @@ export default function OrderForm() {
               Hamur Seç<span>*</span>
             </h3>
             {errors.pizzaHamur && (
-              <p style={{ color: "red" }}>
-                Lütfen bir hamur türü seçiniz.
-              </p>
+              <p style={{ color: "red" }}>Lütfen bir hamur türü seçiniz.</p>
             )}
             <FormGroup>
               <select
@@ -236,6 +241,18 @@ export default function OrderForm() {
           })}
         </div>
         <div className="input-container">
+          <h3>Ad Soyad</h3>
+          <Input
+            type="textarea"
+            name="fullname"
+            value={form.fullname}
+            onChange={handleChange}
+          />
+          {errors.fullname && (
+            <p style={{ color: "red" }}>
+              Lütfen geçerli bir ad ve soyad giriniz.
+            </p>
+          )}
           <h3>Sipariş Notu</h3>
           <Input
             type="textarea"
@@ -245,38 +262,37 @@ export default function OrderForm() {
             placeholder="Siparişine eklemek istediğin bir not var mı?"
             id="textArea"
           />
+        </div>
+        <hr />
+
+        <div className="siparis-container">
+          <div className="counter-button">
+            <Counter
+              onCountChange={handleCountChange}
+              count={count}
+              setCount={setCount}
+            />
           </div>
-          <hr />
 
-          <div className="siparis-container">
-            <div className="counter-button">
-              <Counter
-                onCountChange={handleCountChange}
-                count={count}
-                setCount={setCount}
-              />
-            </div>
-
-            <div className="siparis-toplam">
-              <h3>Sipariş Toplamı</h3>
-              <div className="price-container">
-                <div className="fiyatlar grey">
-                  <p>Seçimler</p>
-                  <p>{form.ekMalzeme.length * 5}₺</p>
-                </div>
-                <div className="fiyatlar red">
-                  <p>Toplam</p>
-                  <p>{fiyat}₺</p>
-                </div>
+          <div className="siparis-toplam">
+            <h3>Sipariş Toplamı</h3>
+            <div className="price-container">
+              <div className="fiyatlar grey">
+                <p>Seçimler</p>
+                <p>{form.ekMalzeme.length * 5}₺</p>
               </div>
-
-              <button className="submit-button" disabled={!isValid}>
-                Sipariş Ver
-              </button>
+              <div className="fiyatlar red">
+                <p>Toplam</p>
+                <p>{fiyat}₺</p>
+              </div>
             </div>
-          </div>
-        </Form>
-      </>
-    );
-  }
 
+            <button className="submit-button" disabled={!isValid}>
+              Sipariş Ver
+            </button>
+          </div>
+        </div>
+      </Form>
+    </>
+  );
+}
