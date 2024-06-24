@@ -247,6 +247,7 @@ export default function OrderForm() {
             name="fullname"
             value={form.fullname}
             onChange={handleChange}
+            id="nameArea"
           />
           {errors.fullname && (
             <p style={{ color: "red" }}>
