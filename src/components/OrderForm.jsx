@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import Check from "./Check";
 import Counter from "./Counter";
 import axios from "axios";
+import MapComponent from "./MapComponent";
 
 const initialErrors = {
   pizzaSize: true,
@@ -254,6 +255,10 @@ export default function OrderForm() {
               Lütfen geçerli bir ad ve soyad giriniz.
             </p>
           )}
+          <div className="App">
+            <h3>Adresinizi İşaretleyiniz</h3>
+            <MapComponent />
+          </div>
           <h3>Sipariş Notu</h3>
           <Input
             type="textarea"
