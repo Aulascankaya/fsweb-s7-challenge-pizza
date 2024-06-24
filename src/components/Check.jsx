@@ -10,6 +10,7 @@ function Check({ changeFn, isChecked, value, label, name, className }) {
         name={name}
         value={value}
         checked={isChecked}
+        className="checkbox"
       />
       {label}
     </Label>
