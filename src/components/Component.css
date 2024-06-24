@@ -72,7 +72,9 @@
   padding: 5px 25px;
   background-color: white;
 }
-
+.first-section{
+  background-color:#FAF7F2 ;
+}
 .images-section {
   align-items: center;
   justify-content: space-evenly;
@@ -165,6 +167,48 @@
 }
 
 
+.bottom-icon-div {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  gap: 5px;
+  margin-bottom: 2rem;
+  border: 0;
+  border-radius: 100px;
+  padding: 5px 25px;
+  background-color: #FAF7F2;
+}
+
+.food-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  gap: 50px;
+}
+
+.food-card {
+  font-family: "Roboto Condensed";
+  border: 20px;
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+}
+
+.food-card h5 {
+  padding: 30px;
+}
+
+.food-card img {
+  padding: 30px;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-around;
+}
 
 
 

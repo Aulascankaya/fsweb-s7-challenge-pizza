@@ -1,7 +1,9 @@
 import React from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
-import TopIcons from "./TopIcons";
 import Banner from "./Banner";
+import TopIcons from "./TopIcons";
+import BottomIcons from "./BottomIcons";
+import FoodCards from "./FoodCards";
 
 function Home() {
   let history = useHistory();
@@ -67,7 +69,11 @@ function Home() {
           <p className="first-text">en çok paketlenen menüler</p>
           <p className="second-text">Acıktıran Kodlara Doyuran Lezzetler</p>
         </div>
+        <BottomIcons />
+        <FoodCards />
       </div>
+
+
     </div>
   );
 }
