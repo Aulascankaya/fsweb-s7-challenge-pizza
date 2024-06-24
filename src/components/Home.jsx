@@ -1,5 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
+import TopIcons from "./TopIcons";
+import Banner from "./Banner";
 
 function Home() {
 
@@ -12,18 +14,8 @@ function Home() {
 
   return (
     <div className="home-page">
-      <div className="home-page-div">
-       <img src="./Assets/mile1-assets/tek-yemek.png" alt="logo" />
-      <h1>
-        <span>KOD ACIKTIRIR</span>
-        <span>PİZZA DOYURUR</span>
-      </h1>
-      <div className="siparis-button-div">
-        <button className="siparis-button" type="button" onClick={handleClick}>
-            ACIKTIM
-        </button>
-      </div>
-      </div>
+      <Banner onClick={handleClick} />
+      <TopIcons/>
     </div>
   );
 }
