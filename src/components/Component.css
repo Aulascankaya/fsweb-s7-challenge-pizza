@@ -450,15 +450,30 @@ hr {
   margin-bottom: 100px;
 }
 
-.orderSuccess p {
-  margin: 0;
-  padding: 0;
-  font-size: 86px;
-  font-weight: 300;
-  line-height: 92px;
-  letter-spacing: 1.5px;
-  text-align: center;
+
+
+.order-summary {
+  font-size: 1.2rem;
+  margin-top: 30px;
 }
+
+.order-summary p {
+  margin: 5px 0;
+}
+
+.order-total {
+  background-color: #b22222;
+  padding: 15px;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.order-total p {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
 
 /*SUCCESS PAGE END*/
 
@@ -634,3 +649,6 @@ hr {
   display: flex;
   gap: 8px;
 }
+
+
+

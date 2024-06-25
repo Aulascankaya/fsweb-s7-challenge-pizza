@@ -21,6 +21,7 @@ const initialForm = {
   siparisNotu: "",
   fullname: "",
   adet: 1,
+
 };
 
 const malzemeler = [
@@ -48,6 +49,7 @@ export default function OrderForm() {
   const [count, setCount] = useState(1);
   const [fiyat, setFiyat] = useState(0);
   const [errors, setErrors] = useState(initialErrors);
+  const [address, setAddress] = useState("");
 
   // handleChange fonksiyonu
   const handleChange = (event) => {
@@ -99,7 +101,7 @@ export default function OrderForm() {
         setForm(initialForm);
         setFiyat(0);
         setCount(1);
-        history.push("/orderSuccess");
+        history.push("/orderSuccess",{ ...form, totalPrice: fiyat ,address});
       })
       .catch((err) => console.log(err));
   };
@@ -129,6 +131,10 @@ export default function OrderForm() {
         !errors.fullname
     );
   }, [errors]);
+
+  const handleAddressChange = (address) => {
+    setForm({ ...form, address });
+  };
 
   //form elemanları
 
@@ -247,7 +253,7 @@ export default function OrderForm() {
           )}
           <div className="App">
             <h3>Adresinizi İşaretleyiniz</h3>
-            <MapComponent />
+            <MapComponent address={address} setAddress={setAddress} onAddressChange={handleAddressChange} />
           </div>
           <h3>Sipariş Notu</h3>
           <Input

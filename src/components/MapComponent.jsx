@@ -24,9 +24,10 @@ const LocationMarker = ({ setSelectedPosition }) => {
   return null;
 };
 
-const MapComponent = () => {
+const MapComponent = (props) => {
   const [selectedPosition, setSelectedPosition] = useState(null);
-  const [address, setAddress] = useState("");
+  const{address, setAddress} = props
+
 
   const fetchAddress = async (lat, lng) => {
     const response = await fetch(
@@ -34,6 +35,7 @@ const MapComponent = () => {
     );
     const data = await response.json();
     setAddress(data.display_name);
+   
   };
 
   const handleMapClick = (latlng) => {
