@@ -21,7 +21,6 @@ const initialForm = {
   siparisNotu: "",
   fullname: "",
   adet: 1,
-
 };
 
 const malzemeler = [
@@ -101,7 +100,7 @@ export default function OrderForm() {
         setForm(initialForm);
         setFiyat(0);
         setCount(1);
-        history.push("/orderSuccess",{ ...form, totalPrice: fiyat ,address});
+        history.push("/orderSuccess", { ...form, totalPrice: fiyat, address });
       })
       .catch((err) => console.log(err));
   };
@@ -140,10 +139,8 @@ export default function OrderForm() {
 
   return (
     <>
-<Description />
+      <Description />
       <Form className="formContainer" onSubmit={handleSubmit}>
-
-
         <div className="pizza-size-container">
           <div className="pizza-size-card">
             <h3>
@@ -153,45 +150,50 @@ export default function OrderForm() {
               <p style={{ color: "red" }}>Lütfen bir boyut seçiniz.</p>
             )}
             <div className="radio-group">
-            <FormGroup>
-              <Input
-                id="küçük"
-                type="radio"
-                name="pizzaSize"
-                value="Küçük"
-                onChange={handleChange}
-                checked={form.pizzaSize === "Küçük"}
-                className="custom-radio-input"
+              <FormGroup>
+                <Input
+                  id="küçük"
+                  type="radio"
+                  name="pizzaSize"
+                  value="Küçük"
+                  onChange={handleChange}
+                  checked={form.pizzaSize === "Küçük"}
+                  className="custom-radio-input"
+                />
+                <Label htmlFor="küçük" className="custom-radio-label">
+                  S
+                </Label>
+              </FormGroup>
 
-              />
-              <Label htmlFor="küçük" className="custom-radio-label">S</Label>
-            </FormGroup>
+              <FormGroup>
+                <Input
+                  id="orta"
+                  type="radio"
+                  name="pizzaSize"
+                  value="Orta"
+                  onChange={handleChange}
+                  checked={form.pizzaSize === "Orta"}
+                  className="custom-radio-input"
+                />
+                <Label htmlFor="orta" className="custom-radio-label">
+                  M
+                </Label>
+              </FormGroup>
 
-            <FormGroup>
-              <Input
-                id="orta"
-                type="radio"
-                name="pizzaSize"
-                value="Orta"
-                onChange={handleChange}
-                checked={form.pizzaSize === "Orta"}
-                className="custom-radio-input"
-              />
-              <Label htmlFor="orta" className="custom-radio-label">M</Label>
-            </FormGroup>
-
-            <FormGroup>
-              <Input
-                id="büyük"
-                type="radio"
-                name="pizzaSize"
-                value="Büyük"
-                onChange={handleChange}
-                checked={form.pizzaSize === "Büyük"}
-                className="custom-radio-input"
-              />
-              <Label htmlFor="büyük" className="custom-radio-label">L</Label>
-            </FormGroup>
+              <FormGroup>
+                <Input
+                  id="büyük"
+                  type="radio"
+                  name="pizzaSize"
+                  value="Büyük"
+                  onChange={handleChange}
+                  checked={form.pizzaSize === "Büyük"}
+                  className="custom-radio-input"
+                />
+                <Label htmlFor="büyük" className="custom-radio-label">
+                  L
+                </Label>
+              </FormGroup>
             </div>
           </div>
 
@@ -252,8 +254,15 @@ export default function OrderForm() {
             </p>
           )}
           <div className="App">
+
             <h3>Adresinizi İşaretleyiniz</h3>
-            <MapComponent address={address} setAddress={setAddress} onAddressChange={handleAddressChange} />
+
+            <MapComponent
+              address={address}
+              setAddress={setAddress}
+              onAddressChange={handleAddressChange}
+            />
+
           </div>
           <h3>Sipariş Notu</h3>
           <Input
