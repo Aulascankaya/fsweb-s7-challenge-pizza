@@ -25,32 +25,60 @@
   flex-direction: column;
   align-items: center;
   background-position: center;
+  text-align: center;
 }
 .banner h3 {
   font-family: "Satisfy";
   color: #fdc913;
+  font-size: 32px;
+}
+.banner span{
+  font-family: Roboto Condensed;
+  font-size: 72px;
+  font-weight: 300;
+  line-height: 86px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: white
+
 }
 
-.siparis.buton-div {
+.siparis-buton-div {
   margin: 50px;
 }
 
+.siparis-buton{
+ color: red;
+ font-family: "Barlow";
+ border: none;
+ border-radius: 20px;
+}
+.siparis-buton:hover{
+  background-color: #dddddd;
+}
+
 .aciktim-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 16px;
-  font-weight: 400;
-  font-family: "Roboto Condensed";
-  color: #292929;
   background-color: #fdc913;
-  border-radius: 100px;
-  display: flex;
-  align-items: center;
+  color: #292929;
+  border-radius: 50px;
   cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 193px;
+  height: 56px;
+  border: 0;
+  font-family: "Barlow";
+  font-size: 18px;
+  font-weight: 600;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
   animation: bounce 0.5s cubic-bezier(0.8, 0, 1, 1) infinite alternate;
+}
+.aciktim-btn:hover {
+  background-color: #e0a300;
+  color: #292929;
+  animation: bounce 0.5s cubic-bezier(0.8, 0, 1, 1) infinite alternate
 }
 
 .icons {
@@ -161,8 +189,9 @@
 
 .context .second-text {
   font-size: 2.5rem;
-  font-family: "Roboto Condensed";
+  font-family: "Barlow";
   color: #292929;
+  font-weight: 400;
 }
 
 .bottom-icon-div {
@@ -176,6 +205,14 @@
   border-radius: 100px;
   padding: 5px 25px;
   background-color: #faf7f2;
+}
+.bottom-icons-button{
+  background-color: #FFFFFF;
+
+}
+.bottom-icons-button:hover{
+border: 2px solid #fdc913;
+
 }
 
 .food-cards {
@@ -433,46 +470,80 @@ hr {
 /* ORDER PAGE END*/
 
 /*SUCCESS PAGE*/
-
 .orderSuccess {
-  font-family: Roboto Condensed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: #ce2829;
   color: #faf7f2;
-  width: 100vw;
-  height: 100vh;
+  text-align: center;
+  padding: 50px;
+  font-family: "Barlow", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.orderSuccess img {
-  margin-top: 0;
-  margin-bottom: 100px;
+
+.orderSuccess-text h2 {
+  font-family: Satisfy;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 44.27px;
+  text-align: center;
+  color: #fdc913;
 }
 
+.orderSuccess-text h3 {
+  font-family: Roboto Condensed;
+  font-size: 86px;
+  font-weight: 300;
+  line-height: 92px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-top: 0%;
+}
 
+.orderDetails {
+  background-color: #ce2829;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
 
-.order-summary {
-  font-size: 1.2rem;
+.acıPizza {
+  font-family: Barlow;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 29.44px;
+  text-align: center;
+}
+
+.orderDetails ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  color: #faf7f2;
+}
+
+.orderDetails ul li {
+  margin: 10px 0;
+}
+
+.orderTotal {
+  border: 2px solid #faf7f2;
+  padding: 20px;
   margin-top: 30px;
-}
-
-.order-summary p {
-  margin: 5px 0;
-}
-
-.order-total {
-  background-color: #b22222;
-  padding: 15px;
   display: inline-block;
-  margin-top: 20px;
-  border-radius: 10px;
+  width: 60%;
+  color: #faf7f2;
 }
 
-.order-total p {
-  margin: 5px 0;
-  font-size: 1.2rem;
+.orderTotal p {
+  margin: 10px 0;
+  font-size: 24px;
+  font-family: "Barlow", sans-serif;
 }
+
+
 
 
 /*SUCCESS PAGE END*/
@@ -529,11 +600,29 @@ hr {
   padding-bottom: 50px;
 }
 .social-icons {
+  font-size: 25px;
   display: flex;
   gap: 50px;
   color: white;
 }
 
+.fa-instagram:hover{
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
+  border-radius: 7px;
+}
+.fa-x-twitter:hover{
+ color: #1DA1F2;
+}
+.fa-facebook:hover{
+ color: #1877F2
+}
 
 .checkbox{
   appearance: none;
