@@ -4,9 +4,9 @@ import {
   Route,
   Switch,
 } from "react-router-dom/cjs/react-router-dom.min";
-import Home from "./components/Home";
-import OrderForm from "./components/OrderForm";
-import Success from "./components/Success";
+import Home from "./pages/Home";
+import OrderForm from "./pages/OrderForm";
+import Success from "./pages/Success";
 import "./components/Component.css";
 import "./App.css";
 import Header from "./components/Header";

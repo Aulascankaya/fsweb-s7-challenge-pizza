@@ -1,9 +1,9 @@
 import React from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
-import Banner from "./Banner";
-import TopIcons from "./TopIcons";
-import BottomIcons from "./BottomIcons";
-import FoodCards from "./FoodCards";
+import Banner from "../components/Banner";
+import TopIcons from "../components/TopIcons";
+import BottomIcons from "../components/BottomIcons";
+import FoodCards from "../components/FoodCards";
 
 function Home() {
   let history = useHistory();

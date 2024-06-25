@@ -67,7 +67,7 @@ const MapComponent = () => {
 
       <div>
         <p>
-          <span className="adress-select">Selected Address:</span> {address}
+          <span className="adress-select">Adresiniz:</span> {address}
         </p>
       </div>
     </div>

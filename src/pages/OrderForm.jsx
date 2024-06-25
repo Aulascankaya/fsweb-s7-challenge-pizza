@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Form, FormGroup, Label, Input } from "reactstrap";
 import { useHistory } from "react-router-dom";
-import Check from "./Check";
-import Counter from "./Counter";
+import Check from "../components/Check";
+import Counter from "../components/Counter";
 import axios from "axios";
-import MapComponent from "./MapComponent";
+import MapComponent from "../components/MapComponent";
+import Description from "../components/Description";
 
 const initialErrors = {
   pizzaSize: true,
@@ -133,27 +134,10 @@ export default function OrderForm() {
 
   return (
     <>
-      <header className="header">
-        <img src="./Assets/mile1-assets/tek-yemek.png" alt="logo" />
-      </header>
+<Description />
       <Form className="formContainer" onSubmit={handleSubmit}>
-        <h3>Position Absolute Acı Pizza</h3>
-        <div className="rating-container">
-          <div className="price">85.50₺</div>
-          <div className="rating">
-            <span>4.9</span>
-            <span>(200)</span>
-          </div>
-        </div>
 
-        <p className="infoText">
-          Frontent Dev olarak hala position:absolute kullaniyorsan bu çok acı
-          pizza tam sana göre. Pizza. domates, peynir ve genellikle çeşitli
-          diger malzemelerle kaplanmış. daha sonra geleneksel olarak odun
-          ateşinde bir firinda yüksek sicaklkta pişirilen, genellikle yuvarlak,
-          düzieştirilmiş mayalı bugday bazlı hamurdan oluşan italyan kökenli
-          lezzetli bir yemektir.. Küçük bir pizzaya bazen pizzetta denir.
-        </p>
+
         <div className="pizza-size-container">
           <div className="pizza-size-card">
             <h3>
@@ -162,6 +146,7 @@ export default function OrderForm() {
             {errors.pizzaSize && (
               <p style={{ color: "red" }}>Lütfen bir boyut seçiniz.</p>
             )}
+            <div className="radio-group">
             <FormGroup>
               <Input
                 id="küçük"
@@ -170,8 +155,10 @@ export default function OrderForm() {
                 value="Küçük"
                 onChange={handleChange}
                 checked={form.pizzaSize === "Küçük"}
+                className="custom-radio-input"
+
               />
-              <Label htmlFor="küçük">Küçük</Label>
+              <Label htmlFor="küçük" className="custom-radio-label">S</Label>
             </FormGroup>
 
             <FormGroup>
@@ -182,8 +169,9 @@ export default function OrderForm() {
                 value="Orta"
                 onChange={handleChange}
                 checked={form.pizzaSize === "Orta"}
+                className="custom-radio-input"
               />
-              <Label htmlFor="orta">Orta</Label>
+              <Label htmlFor="orta" className="custom-radio-label">M</Label>
             </FormGroup>
 
             <FormGroup>
@@ -194,9 +182,11 @@ export default function OrderForm() {
                 value="Büyük"
                 onChange={handleChange}
                 checked={form.pizzaSize === "Büyük"}
+                className="custom-radio-input"
               />
-              <Label htmlFor="büyük">Büyük</Label>
+              <Label htmlFor="büyük" className="custom-radio-label">L</Label>
             </FormGroup>
+            </div>
           </div>
 
           <div className="pizza-dough-card">

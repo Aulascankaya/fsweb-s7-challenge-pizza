@@ -237,24 +237,42 @@
   text-align: left;
 }
 
-.rating-container {
-  display: flex;
-  justify-content: space-between;
+.pizza-dough-card {
+  margin-top: 1.5rem;
 }
 
-.price {
+.pizza-dough-card h3 {
   font-family: Barlow;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 37.47px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #292929;
   text-align: left;
+  margin-top: 0;
 }
-.rating {
-  display: flex;
-  justify-content: space-between;
-  gap: 75px; /* Rating değerleri arasındaki boşluk */
-  align-items: center; /* Dikey hizalama */
+
+.pizza-dough-card h3 span {
+  color: #d80027;
 }
+
+.pizza-dough-card select {
+  width: 283px;
+  height: 56px;
+  background-color: #faf7f2;
+  border-radius: 6px;
+  border: 0px;
+  padding: 0 2rem;
+  appearance: none;
+  cursor: pointer;
+}
+
+.pizza-dough-card option {
+  font-weight: 500;
+  font-size: 14px;
+  color: #5f5f5f;
+  font-family: Barlow;
+}
+
+
 
 .infoText {
   font-family: Barlow;
@@ -325,19 +343,28 @@ hr {
 .decrement-button {
   width: 47px;
   height: 56px;
+  border:none;
   border-radius: 6px 0px 0px 6px;
-  background-color: #fdc913;
+  background-color: #FAF7F2;
+}
+.decrement-button:hover{
+  background-color: #FDC913;
 }
 .increment-button {
   width: 47px;
   height: 56px;
+  border: none;
   border-radius: 0px 6px 6px 0px;
-  background-color: #fdc913;
+  background-color: #FAF7F2;
+}
+.increment-button:hover{
+  background-color: #FDC913;
 }
 
 .numberCounter {
   padding: 17px 20px;
-  border: 1px solid #d9d9d9;
+  background-color: #FAF7F2;
+  border: #FAF7F2;
 }
 
 .siparis-container {
@@ -536,4 +563,74 @@ hr {
   font-size: 18px;
   font-weight: 200;
   color: black;
+}
+
+
+/* DESCRİPTİON */
+.info-div{
+  display: flex;
+  width: 100%;
+  background-color: #faf7f2;
+  align-items: center;
+  flex-direction: column;
+}
+.info-name{
+  font-family: "Barlow";
+  font-size: 22px;
+  font-weight: 600;
+  color: #292929;
+}
+.info-price{
+  font-family: "Barlow";
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 28px;
+  align-items: center;
+  color: #292929;
+  width: 100%;
+}
+.info-descript{
+  font-family: "Barlow";
+  font-size: 16px;
+  font-weight: 400;
+  color: #5f5f5f;
+  width: 580px;
+  text-align: left;
+}
+
+
+
+/*CUSTOM RADIO INPUT*/
+.custom-radio-input {
+  display: none;
+}
+
+.custom-radio-label {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background-color: #FAF7F2;
+
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: black;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-radio-input:checked + .custom-radio-label {
+  background-color: #FFEECC;
+
+}
+
+.custom-radio-label:hover {
+  background-color: #FFEECC;
+}
+
+.radio-group{
+  display: flex;
+  gap: 8px;
 }
