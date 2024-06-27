@@ -76,6 +76,7 @@ export default function OrderForm() {
     }
 
     setForm({ ...form, [name]: newValue });
+
     if (name == "fullname") {
       if (value.replaceAll(" ", "").length >= 3) {
         setErrors({ ...errors, [name]: false });
@@ -247,6 +248,7 @@ export default function OrderForm() {
             value={form.fullname}
             onChange={handleChange}
             id="nameArea"
+            className="fullnameTest"
           />
           {errors.fullname && (
             <p style={{ color: "red" }}>
