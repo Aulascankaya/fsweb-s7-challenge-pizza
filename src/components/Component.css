@@ -247,6 +247,9 @@ border: 2px solid #fdc913;
 
 /* HOME PAGE END */
 
+
+
+
 /* HEADER */
 .header {
   display: flex;
@@ -469,6 +472,9 @@ hr {
 
 /* ORDER PAGE END*/
 
+
+
+
 /*SUCCESS PAGE*/
 .orderSuccess {
   background-color: #ce2829;
@@ -548,6 +554,9 @@ hr {
 
 /*SUCCESS PAGE END*/
 
+
+
+
 /*FOOTER*/
 .footer {
   justify-content: space-around;
@@ -624,6 +633,41 @@ hr {
  color: #1877F2
 }
 
+
+/* DESCRİPTİON */
+.info-div{
+  display: flex;
+  width: 100%;
+  background-color: #faf7f2;
+  align-items: center;
+  flex-direction: column;
+}
+.info-name{
+  font-family: "Barlow";
+  font-size: 22px;
+  font-weight: 600;
+  color: #292929;
+}
+.info-price{
+  font-family: "Barlow";
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 28px;
+  align-items: center;
+  color: #292929;
+  width: 100%;
+}
+.info-descript{
+  font-family: "Barlow";
+  font-size: 16px;
+  font-weight: 400;
+  color: #5f5f5f;
+  width: 580px;
+  text-align: left;
+}
+
+/*CUSTOM CHECKBOX*/
 .checkbox{
   appearance: none;
   -webkit-appearance: none;
@@ -670,38 +714,7 @@ hr {
 }
 
 
-/* DESCRİPTİON */
-.info-div{
-  display: flex;
-  width: 100%;
-  background-color: #faf7f2;
-  align-items: center;
-  flex-direction: column;
-}
-.info-name{
-  font-family: "Barlow";
-  font-size: 22px;
-  font-weight: 600;
-  color: #292929;
-}
-.info-price{
-  font-family: "Barlow";
-  display: flex;
-  justify-content: space-between;
-  font-weight: 700;
-  font-size: 28px;
-  align-items: center;
-  color: #292929;
-  width: 100%;
-}
-.info-descript{
-  font-family: "Barlow";
-  font-size: 16px;
-  font-weight: 400;
-  color: #5f5f5f;
-  width: 580px;
-  text-align: left;
-}
+
 
 
 
@@ -741,3 +754,151 @@ hr {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile Devices */
+@media only screen and (max-width: 600px) {
+  .formContainer {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .pizza-size-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .malzemeler-container .malzeme-label {
+    flex-basis: 100%;
+  }
+
+  #nameArea, #textArea {
+    width: 100%;
+  }
+
+  .siparis-toplam {
+    width: 100%;
+  }
+
+  .banner h3 {
+    font-size: 24px;
+  }
+
+  .banner span {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .siparis-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .counter-button, .siparis-toplam {
+    width: 100%;
+  }
+
+  .price-container {
+    padding: 0 20px;
+  }
+}
+
+/* Tablet Devices */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .formContainer {
+    width: 80%;
+  }
+
+  .pizza-size-container {
+    flex-direction: column;
+  }
+
+  .malzemeler-container .malzeme-label {
+    flex-basis: 48%;
+  }
+
+  #nameArea, #textArea {
+    width: 100%;
+  }
+
+  .siparis-toplam {
+    width: 100%;
+  }
+
+  .banner h3 {
+    font-size: 28px;
+  }
+
+  .banner span {
+    font-size: 56px;
+    line-height: 72px;
+  }
+
+  .siparis-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .counter-button, .siparis-toplam {
+    width: 100%;
+  }
+
+  .price-container {
+    padding: 0 30px;
+  }
+}
+
+/* Desktop Devices */
+@media only screen and (min-width: 768px) {
+  .formContainer {
+    width: 600px;
+  }
+
+  .pizza-size-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .malzemeler-container .malzeme-label {
+    flex-basis: 30%;
+  }
+
+  #nameArea, #textArea {
+    width: 580px;
+  }
+
+  .siparis-toplam {
+    width: 386px;
+  }
+
+  .banner h3 {
+    font-size: 32px;
+  }
+
+  .banner span {
+    font-size: 72px;
+    line-height: 86px;
+  }
+
+  .siparis-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .counter-button, .siparis-toplam {
+    width: auto;
+  }
+
+  .price-container {
+    padding: 0 60px;
+  }
+}
