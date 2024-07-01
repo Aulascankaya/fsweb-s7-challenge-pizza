@@ -3,6 +3,8 @@ import { MapContainer, TileLayer, Marker, useMapEvents } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import iconRetinaUrl from "../assets/pizza.png";
+import iconUrl from "leaflet/dist/images/marker-icon.png";
+import shadowUrl from "leaflet/dist/images/marker-shadow.png";
 import { Icon } from "leaflet"; // icon gözükmüyordu düzeltme
 
 // Marker ikonu için düzeltme
@@ -24,7 +26,8 @@ const LocationMarker = ({ setSelectedPosition }) => {
 
 const MapComponent = (props) => {
   const [selectedPosition, setSelectedPosition] = useState(null);
-  const { address, setAddress } = props;
+  const{address, setAddress} = props
+
 
   const fetchAddress = async (lat, lng) => {
     const response = await fetch(
@@ -32,6 +35,7 @@ const MapComponent = (props) => {
     );
     const data = await response.json();
     setAddress(data.display_name);
+
   };
 
   const handleMapClick = (latlng) => {
