@@ -256,14 +256,15 @@ export default function OrderForm() {
             </p>
           )}
           <div className="App">
-
             <h3>Adresinizi İşaretleyiniz</h3>
 
-            { /*<MapComponent
-              address={address}
-              setAddress={setAddress}
-              onAddressChange={handleAddressChange}
-            />*/}
+            {
+              <MapComponent
+                address={address}
+                setAddress={setAddress}
+                onAddressChange={handleAddressChange}
+              />
+            }
           </div>
           <h3>Sipariş Notu</h3>
           <Input
