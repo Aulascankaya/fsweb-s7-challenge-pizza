@@ -739,12 +739,12 @@ hr {
 }
 
 .custom-radio-input:checked + .custom-radio-label {
-  background-color: #FFEECC;
+  background-color: #FDC913;
 
 }
 
 .custom-radio-label:hover {
-  background-color: #FFEECC;
+  background-color: #FDC913;
 }
 
 .radio-group{
@@ -902,3 +902,36 @@ hr {
     padding: 0 60px;
   }
 }
+
+
+
+/*denemeler*/
+
+.card {
+  position: relative;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card::before {
+  z-index: -10;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, #FDC913 0%, #CE2829 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(25px);
+}
+
+
+
+.card:hover::after {
+  filter: blur(50px);
+}
+
+

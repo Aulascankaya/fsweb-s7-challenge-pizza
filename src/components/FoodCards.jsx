@@ -32,7 +32,7 @@ export default function FoodCards() {
     <div className="food-cards">
       {paths.map((path, index) => {
         return (
-          <div key={index} className="food-card" onClick={handleClick}>
+          <div key={index} className="food-card card" onClick={handleClick}>
             <div>
               <img src={path.url} />
               <h5>{path.name}</h5>

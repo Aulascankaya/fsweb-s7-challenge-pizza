@@ -26,7 +26,7 @@ const initialForm = {
 const malzemeler = [
   { value: "pepperoni", label: "Pepperoni" },
   { value: "sosis", label: "Sosis" },
-  { value: "kanada jambonu", label: "Kanada Jambonu" },
+  { value: "jambon", label: "Jambon" },
   { value: "tavuk ızgara", label: "Tavuk Izgara" },
   { value: "soğan", label: "Soğan" },
   { value: "domates", label: "Domates" },
@@ -259,12 +259,11 @@ export default function OrderForm() {
 
             <h3>Adresinizi İşaretleyiniz</h3>
 
-            <MapComponent
+            { /*<MapComponent
               address={address}
               setAddress={setAddress}
               onAddressChange={handleAddressChange}
-            />
-
+            />*/}
           </div>
           <h3>Sipariş Notu</h3>
           <Input

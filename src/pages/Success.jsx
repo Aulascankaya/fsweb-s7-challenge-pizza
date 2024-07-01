@@ -31,6 +31,9 @@ function Success() {
           <li>
             <strong>Adres:</strong> {form.address}
           </li>
+          <li>
+            <strong>Sipariş Notu:</strong> {form.siparisNotu}
+          </li>
         </ul>
         <div className="orderTotal">
           <p>Sipariş Toplamı</p>
