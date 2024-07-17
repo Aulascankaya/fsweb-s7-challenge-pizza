@@ -1,10 +1,10 @@
 import { useHistory } from "react-router-dom";
-import {icon1} from "./Assets/mile2-aseets/icons/1.svg"
-import {icon2} from "./Assets/mile2-aseets/icons/2.svg"
-import {icon3} from "./Assets/mile2-aseets/icons/3.svg"
-import {icon4} from "./Assets/mile2-aseets/icons/4.svg"
-import {icon5} from "./Assets/mile2-aseets/icons/5.svg"
-import {icon6} from "./Assets/mile2-aseets/icons/6.svg"
+import icon1 from "./Assets/mile2-aseets/icons/1.svg"
+import icon2 from "./Assets/mile2-aseets/icons/2.svg"
+import icon3 from "./Assets/mile2-aseets/icons/3.svg"
+import icon4 from "./Assets/mile2-aseets/icons/4.svg"
+import icon5 from "./Assets/mile2-aseets/icons/5.svg"
+import icon6 from "./Assets/mile2-aseets/icons/6.svg"
 
 export default function BottomIcons() {
   const history = useHistory();
