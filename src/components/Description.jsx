@@ -5,7 +5,7 @@
 export default function Description() {
   return (
     <div className="info-div">
-      <img src="../../Assets/mile2-aseets/pictures/form-banner.png" />
+      <img src="/form-banner.png" />
       <div>
         <div
           style={{

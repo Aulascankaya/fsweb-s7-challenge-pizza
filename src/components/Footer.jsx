@@ -5,22 +5,22 @@ export default function Footer() {
         <div className="contact">
           <img
             className="footer-logo"
-            src="./Assets/mile2-aseets/footer/logo-footer.svg"
+            src="/logo-footer.svg"
             alt=""
           />
           <ul>
             <li>
-              <img src="./Assets/mile2-aseets/footer/icons/icon-1.png" />
+              <img src="/icon-1.png" />
               <span> </span>
               341 Londonderry Road,İstanbul Türkiye
             </li>
             <li>
-              <img src="./Assets/mile2-aseets/footer/icons/icon-2.png" />
+              <img src="/icon-2.png" />
               <span> </span>
               aciktim@teknolojikyemekler.com
             </li>
             <li>
-              <img src="./Assets/mile2-aseets/footer/icons/icon-3.png" />
+              <img src="/icon-3.png" />
               <span> </span>
               +90 216 123 45 67
             </li>
@@ -42,24 +42,24 @@ export default function Footer() {
           <div className="instagram-container">
             <div>
               {" "}
-              <img src="./Assets/mile2-aseets/footer/insta/li-0.png" />
+              <img src="/li-0.png" />
             </div>
             <div>
-              <img src="./Assets/mile2-aseets/footer/insta/li-1.png" />
-            </div>
-            <div>
-              {" "}
-              <img src="./Assets/mile2-aseets/footer/insta/li-2.png" />
-            </div>
-            <div>
-              <img src="./Assets/mile2-aseets/footer/insta/li-3.png" />
+              <img src="/li-1.png" />
             </div>
             <div>
               {" "}
-              <img src="./Assets/mile2-aseets/footer/insta/li-4.png" />
+              <img src="/li-2.png" />
             </div>
             <div>
-              <img src="./Assets/mile2-aseets/footer/insta/li-5.png" />
+              <img src="/li-3.png" />
+            </div>
+            <div>
+              {" "}
+              <img src="/li-4.png" />
+            </div>
+            <div>
+              <img src="/li-5.png" />
             </div>
           </div>
         </div>

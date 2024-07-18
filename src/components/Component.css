@@ -16,7 +16,7 @@
 }
 
 .banner {
-  background-image: url("Assets/mile1-assets/home-banner.png");
+  background-image: url("/home-banner.png");
   height: 90vh;
   width: 100vw;
   background-size: cover;
@@ -111,7 +111,7 @@
   flex-wrap: wrap;
 }
 .ozel-lezzetus {
-  background-image: url("Assets/mile2-aseets/cta/kart-1.png");
+  background-image: url("/kart-1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -138,7 +138,7 @@
 
 .hackathlon {
   height: 25vh;
-  background-image: url("Assets/mile2-aseets/cta/kart-2.png");
+  background-image: url("/kart-2.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -155,7 +155,7 @@
 
 .npm {
   height: 25vh;
-  background-image: url("Assets/mile2-aseets/cta/kart-3.png");
+  background-image: url("/kart-3.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

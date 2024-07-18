@@ -2,12 +2,12 @@ import { useHistory } from "react-router-dom";
 export default function TopIcons() {
   const history = useHistory();
   const icons = [
-    { path: "./assets/icons/1.svg", val: "YENİ! Kore" },
-    { path: "./Assets/mile2-aseets/icons/2.svg", val: "Pizza" },
-    { path: "./Assets/mile2-aseets/icons/3.svg", val: "Burger" },
-    { path: "./Assets/mile2-aseets/icons/4.svg", val: "Kızartmalar" },
-    { path: "./Assets/mile2-aseets/icons/5.svg", val: "Fast Food" },
-    { path: "./Assets/mile2-aseets/icons/6.svg", val: "Gazlı İçecekler" },
+    { path: "/1.svg", val: "YENİ! Kore" },
+    { path: "/2.svg", val: "Pizza" },
+    { path: "/3.svg", val: "Burger" },
+    { path: "/4.svg", val: "Kızartmalar" },
+    { path: "/5.svg", val: "Fast Food" },
+    { path: "/6.svg", val: "Gazlı İçecekler" },
   ];
   const handleClick = () => {
     history.push("/orderForm");
